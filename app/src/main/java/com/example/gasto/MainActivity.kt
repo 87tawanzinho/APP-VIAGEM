@@ -23,7 +23,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun isValid(): Boolean {
+        val distance = binding.editDistance.text.toString()
+        val price = binding.editPrice.text.toString()
+        val autonomy = binding.editAutonomy.text.toString()
+
+        return (distance != "" && price != "" && autonomy != "" && autonomy.toFloat() !== 0f)
+    }
     private fun calculate () {
-        Toast.makeText(this, "Fui clicado", Toast.LENGTH_LONG).show()
+        if(isValid()) {
+            val distance = binding.editDistance.text.toString().toFloat()
+            val price = binding.editPrice.text.toString().toFloat()
+            val autonomy = binding.editAutonomy.text.toString().toFloat()
+
+
+            val totalValue = (distance  * price) / autonomy
+
+            val totalValueStr = "R$ ${"%.2f".format(totalValue)}"
+            binding.textValue.text = totalValueStr
+        } else {
+            Toast.makeText(this, R.string.fill_fields, Toast.LENGTH_LONG).show()
+        }
+
     }
 }
