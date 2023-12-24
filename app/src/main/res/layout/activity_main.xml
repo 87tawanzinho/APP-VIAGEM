@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
   <EditText
@@ -29,4 +30,42 @@
       android:layout_height="wrap_content"
       android:text="@string/preco_per_liter" />
 
+
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/autonomy" />
+
+  <TextView
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/km_per_liter" />
+
+  <TextView
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:textAllCaps="true"
+      android:layout_marginTop="50dp"
+      android:textSize="20sp"
+      android:layout_height="wrap_content"
+      android:text="@string/total" />
+
+  <TextView
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:textAllCaps="true"
+
+      android:textSize="50sp"
+      android:textColor="#8469FF"
+      android:layout_height="wrap_content"
+      android:text="@string/r_0" />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_marginTop="50dp"
+      android:layout_gravity="center"
+      android:layout_height="wrap_content"
+    android:text="@string/calcular" />
 </LinearLayout>
